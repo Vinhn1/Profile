@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinh Nguyễn | Intern Backend Node.js</title>
+    
+    <!-- Meta SEO -->
+    <meta name="description" content="Portfolio chuyên nghiệp của Vinh Nguyễn - Intern Backend Node.js xuất sắc với GPA 3.54, đam mê công nghệ, nghiên cứu khoa học và tiên phong ứng dụng công cụ AI tối ưu hóa hiệu suất lập trình.">
+    <meta name="keywords" content="Vinh Nguyễn, Intern Backend Node.js, MERN Stack, ReactJS, Nodejs, MongoDB, CSHub, portfolio cá nhân, tuyển dụng developer">
+    <meta name="author" content="Vinh Nguyễn">
+    <meta property="og:title" content="Vinh Nguyễn | Intern Backend Node.js">
+    <meta property="og:description" content="Khám phá các dự án công nghệ, nghiên cứu khoa học và kỹ năng lập trình của Vinh Nguyễn.">
+    <meta property="og:type" content="website">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Boxicons CDN -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Glow Background Blobs -->
+    <div class="glow-bg">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- Mouse Trail Glow Container -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <main class="portfolio-container">
+        
+        <!-- ROW 1: Hero Block & Info Stats -->
+        <div class="bento-grid">
+            
+            <!-- 1. HERO BLOCK (Spans 2 columns, 1 row) -->
+            <section class="bento-card hero-card" id="heroCard">
+                <div class="hero-text-content">
+                    <div class="hero-header">
+                        <span class="badge badge-primary"><i class='bx bx-code-alt'></i> Intern Backend Node.js</span>
+                        <span class="badge badge-accent"><i class='bx bx-bot'></i> AI-Powered Developer</span>
+                    </div>
+                    <h1 class="hero-name">Vinh Nguyễn</h1>
+                    <h2 class="hero-title">Intern Backend Node.js <span>& AI-Driven Developer</span></h2>
+                    <p class="hero-desc">
+                        Tôi là một lập trình viên Backend Node.js đam mê xây dựng các hệ thống API hiệu năng cao, bảo mật và mở rộng tốt. Với tư duy logic nhạy bén, điểm GPA 3.54 xuất sắc cùng tinh thần chủ động ứng dụng công cụ AI để tối ưu hiệu suất lập trình, tôi cam kết mang lại giải pháp chất lượng và tối ưu nhất.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-filled">
+                            <span>Khám phá dự án</span>
+                            <i class='bx bx-right-arrow-alt'></i>
+                        </a>
+                        <a href="https://github.com/Vinhn1" target="_blank" class="btn btn-outline">
+                            <i class='bx bxl-github'></i>
+                            <span>GitHub</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2. PROFILE IMAGE & POSITION CARD (Spans 1 column, 2 rows) -->
+            <section class="bento-card profile-image-card">
+                <div class="profile-img-glow"></div>
+                <div class="profile-img-container">
+                    <!-- Concentric animated cyber rings -->
+                    <div class="cyber-ring ring-outer"></div>
+                    <div class="cyber-ring ring-middle"></div>
+                    <div class="cyber-ring ring-inner"></div>
+                    
+                    <div class="profile-avatar-wrapper">
+                        <img src="avatar.jpg" alt="Vinh Nguyễn - Intern Backend Node.js" class="profile-avatar-img">
+                    </div>
+                    
+                    <div class="status-pulse-badge">
+                        <span class="status-dot"></span>
+                        <span class="status-text">Open To Work</span>
+                    </div>
+                </div>
+                
+                <div class="profile-details-wrapper">
+                    <h3 class="profile-name">Vinh Nguyễn</h3>
+                    <div class="profile-role-badge">
+                        <i class='bx bx-terminal'></i>
+                        <span>Intern Backend Node.js</span>
+                    </div>
+                </div>
+
+                <!-- Premium Terminal Telemetry Widget (Lấp đầy khoảng trống thừa) -->
+                <div class="terminal-widget">
+                    <div class="terminal-header">
+                        <div class="terminal-buttons">
+                            <span class="t-btn t-close"></span>
+                            <span class="t-btn t-minimize"></span>
+                            <span class="t-btn t-expand"></span>
+                        </div>
+                        <span class="terminal-title">vinhnguyen_session.sh</span>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="terminal-line">
+                            <span class="t-prompt">$</span> <span class="t-command">node --version</span>
+                        </div>
+                        <div class="terminal-output">v20.11.0</div>
+                        <div class="terminal-line">
+                            <span class="t-prompt">$</span> <span class="t-command">cat info.json</span>
+                        </div>
+                        <div class="terminal-output json-output">
+                            <span class="j-key">"status"</span>: <span class="j-val">"Active"</span>,<br>
+                            <span class="j-key">"gpa"</span>: <span class="j-num">3.54</span> <span class="j-comment">// Hạng Giỏi</span>,<br>
+                            <span class="j-key">"research"</span>: <span class="j-val">"cshub.vn"</span>,<br>
+                            <span class="j-key">"stack"</span>: [<span class="j-val">"Node"</span>, <span class="j-val">"Express"</span>, <span class="j-val">"DB"</span>]
+                        </div>
+                        <div class="terminal-line active-line">
+                            <span class="t-prompt">$</span> <span class="t-cursor-text">ping -c 1 hire_vinh</span><span class="t-blinking-cursor">_</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-skills-mini">
+                    <span class="skill-mini-tag"><i class='bx bxl-nodejs'></i> Node.js</span>
+                    <span class="skill-mini-tag"><i class='bx bxs-server'></i> Express</span>
+                    <span class="skill-mini-tag"><i class='bx bxs-layer'></i> REST API</span>
+                </div>
+            </section>
+
+            <!-- 2. ACADEMIC BLOCK (GPA Display) -->
+            <section class="bento-card gpa-card flex-center-column">
+                <div class="card-icon"><i class='bx bxs-graduation'></i></div>
+                <h3 class="card-label">Thành Tích Học Tập</h3>
+                
+                <div class="gpa-container">
+                    <svg class="gpa-svg" viewBox="0 0 120 120">
+                        <defs>
+                            <linearGradient id="gpaGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#6366f1" />
+                                <stop offset="100%" stop-color="#a855f7" />
+                            </linearGradient>
+                        </defs>
+                        <circle class="circle-bg" cx="60" cy="60" r="50"></circle>
+                        <circle class="circle-progress" cx="60" cy="60" r="50" id="gpaProgress"></circle>
+                    </svg>
+                    <div class="gpa-text">
+                        <span class="gpa-num" id="gpaNum">0.00</span>
+                        <span class="gpa-max">/4.00</span>
+                    </div>
+                </div>
+                
+                <div class="gpa-details">
+                    <div style="display: flex; justify-content: center; gap: 8px; margin-bottom: 12px; flex-wrap: wrap;">
+                        <span class="classification" style="margin-bottom: 0;">HẠNG GIỎI</span>
+                        <span class="classification" style="margin-bottom: 0; background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); box-shadow: 0 0 15px rgba(245, 158, 11, 0.3);"><i class='bx bxs-award'></i> Học bổng Xuất sắc (4 Kỳ)</span>
+                    </div>
+                    <p class="gpa-sub">Sự cam kết vững vàng đối với chất lượng học tập và đã đạt học bổng sinh viên xuất sắc trong 4 học kỳ.</p>
+                </div>
+            </section>
+
+            <!-- 3. SCIENTIFIC RESEARCH BLOCK -->
+            <section class="bento-card research-card">
+                <div class="card-header">
+                    <span class="category-tag"><i class='bx bx-award'></i> Nghiên cứu Khoa học</span>
+                    <h3 class="card-title">Xây Dựng Website Học Tập Trực Tuyến</h3>
+                </div>
+                
+                <div class="research-body">
+                    <div class="moodle-badge">
+                        <i class='bx bxs-layer'></i>
+                        <span>Mã nguồn mở Moodle</span>
+                    </div>
+                    <p class="research-desc">
+                        Nghiên cứu sâu sắc và tối ưu hóa hệ thống Quản lý Học tập (LMS), tinh chỉnh mã nguồn và trực tiếp triển khai nền tảng trực tuyến phục vụ cộng đồng học thuật thực tế.
+                    </p>
+                    <div class="research-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">Đề tài:</span>
+                            <span class="meta-val">Cấp trường học</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Vai trò:</span>
+                            <span class="meta-val">Trưởng nhóm/Developer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-footer">
+                    <a href="https://cshub.vn/" target="_blank" class="live-link-btn">
+                        <span>Khám phá CSHub.vn</span>
+                        <i class='bx bx-link-external'></i>
+                    </a>
+                </div>
+            </section>
+
+            <!-- 4. TECH STACK & AI POWER -->
+            <section class="bento-card skills-card">
+                <h3 class="card-heading-icon"><i class='bx bxs-extension'></i> Kỹ năng công nghệ & Công cụ</h3>
+                
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>Ngôn ngữ & Framework</h4>
+                        <div class="skill-tags">
+                            <span class="tag"><i class='bx bxl-nodejs color-node'></i> Node.js</span>
+                            <span class="tag"><i class='bx bxl-react color-react'></i> ReactJS</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h4>Cơ sở Dữ liệu</h4>
+                        <div class="skill-tags">
+                            <span class="tag"><i class='bx bxs-data color-db'></i> MongoDB</span>
+                            <span class="tag"><i class='bx bxs-data color-mysql'></i> MySQL</span>
+                            <span class="tag">SQL</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h4>Công cụ & Quy trình</h4>
+                        <div class="skill-tags">
+                            <span class="tag"><i class='bx bxl-git color-git'></i> Git</span>
+                            <span class="tag"><i class='bx bxl-github'></i> GitHub</span>
+                            <span class="tag">Vercel / Render</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category ai-accent-box">
+                        <h4 class="ai-title"><i class='bx bxs-zap animate-pulse'></i> AI-Driven Engineering</h4>
+                        <p class="ai-desc">Tận dụng ưu thế vượt trội từ AI (GitHub Copilot, ChatGPT, Claude) để tối ưu hóa mã nguồn, hỗ trợ phân tích thiết kế hệ thống và tăng 300% hiệu năng phát triển.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. PERSONAL PROJECT 1: HOMELY -->
+            <section class="bento-card project-card" id="projects">
+                <div class="project-img-placeholder" style="background: linear-gradient(135deg, rgba(99, 102, 241, 0.15) 0%, rgba(168, 85, 247, 0.15) 100%);">
+                    <i class='bx bx-home-heart project-visual-icon'></i>
+                    <div class="project-tags-top">
+                        <span class="proj-tag">MERN Stack</span>
+                        <span class="proj-tag">Real Estate</span>
+                    </div>
+                </div>
+                
+                <div class="project-info">
+                    <h3 class="project-title">Homely Project</h3>
+                    <p class="project-desc">
+                        Nền tảng tìm kiếm và quản lý bất động sản trực tuyến. Hỗ trợ người dùng lọc, đăng bài và kết nối căn hộ mơ ước với trải nghiệm mượt mà, tối ưu hóa giao diện.
+                    </p>
+                    <div class="project-tech-badges">
+                        <span>ReactJS</span>
+                        <span>Node.js</span>
+                        <span>MongoDB</span>
+                        <span>CSS3</span>
+                    </div>
+                </div>
+
+                <div class="project-links">
+                    <a href="https://github.com/Vinhn1/homely_project" target="_blank" class="proj-btn proj-btn-github">
+                        <i class='bx bxl-github'></i> Code
+                    </a>
+                    <a href="https://homely-project.vercel.app/" target="_blank" class="proj-btn proj-btn-demo">
+                        <i class='bx bx-show'></i> Live Demo
+                    </a>
+                </div>
+            </section>
+
+            <!-- 6. PERSONAL PROJECT 2: NEXTASK API -->
+            <section class="bento-card project-card">
+                <div class="project-img-placeholder" style="background: linear-gradient(135deg, rgba(6, 182, 212, 0.15) 0%, rgba(59, 130, 246, 0.15) 100%);">
+                    <i class='bx bx-task project-visual-icon'></i>
+                    <div class="project-tags-top">
+                        <span class="proj-tag">RESTful API</span>
+                        <span class="proj-tag">Collaboration</span>
+                    </div>
+                </div>
+                
+                <div class="project-info">
+                    <h3 class="project-title">NexTask API</h3>
+                    <p class="project-desc">
+                        Hệ thống API quản lý tác vụ công việc và phân quyền đội nhóm mạnh mẽ. Tích hợp JWT, tối ưu hóa câu lệnh truy vấn cơ sở dữ liệu giúp xử lý nhanh các tác vụ đồng thời.
+                    </p>
+                    <div class="project-tech-badges">
+                        <span>Node.js</span>
+                        <span>Express</span>
+                        <span>MySQL/MongoDB</span>
+                        <span>REST API</span>
+                    </div>
+                </div>
+
+                <div class="project-links">
+                    <a href="https://github.com/Vinhn1/NexTask-API" target="_blank" class="proj-btn proj-btn-github">
+                        <i class='bx bxl-github'></i> Code
+                    </a>
+                    <a href="https://nex-task-api-frontend.vercel.app/" target="_blank" class="proj-btn proj-btn-demo">
+                        <i class='bx bx-show'></i> Live Demo
+                    </a>
+                </div>
+            </section>
+
+            <!-- 7. ADAPTABILITY & SOFT SKILLS (Part-time job transformation!) -->
+            <section class="bento-card experience-card">
+                <h3 class="card-heading-icon"><i class='bx bxs-hot'></i> Sự thích ứng & Kỹ năng thực tế</h3>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">Thực tế cuộc sống & Kỹ năng làm việc áp lực cao</span>
+                            <h5>Chuyên viên dịch vụ Khách hàng & Điều phối vận hành</h5>
+                            <p class="timeline-role">Quán mì cay & Café cao cấp (Bán thời gian)</p>
+                            <p class="timeline-desc">
+                                Rèn luyện tinh thần làm việc kiên trì, giao tiếp tự tin và làm việc hiệu quả dưới áp lực cực lớn tại các khung giờ cao điểm. Tối ưu hóa kỹ năng xử lý tình huống phát sinh, điều phối công việc nhóm ăn ý, quản lý thời gian cực kỳ kỷ luật.
+                            </p>
+                            <div class="soft-skills-badges">
+                                <span class="badge-soft">Chịu áp lực tốt</span>
+                                <span class="badge-soft">Giao tiếp dịch vụ</span>
+                                <span class="badge-soft">Đội nhóm hiệu quả</span>
+                                <span class="badge-soft">Thích ứng nhanh</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 8. ENGLISH LANGUAGE & EXTRACURRICULAR -->
+            <section class="bento-card english-card flex-center-column">
+                <div class="english-badge">
+                    <span class="lang-code">EN</span>
+                    <span class="lang-level">B1</span>
+                </div>
+                <h3 class="lang-title">Tiếng Anh Kỹ Thuật</h3>
+                <p class="lang-desc">
+                    Sở hữu chứng chỉ B1, có khả năng đọc hiểu tài liệu kỹ thuật chuyên ngành trôi chảy, hỗ trợ tốt cho việc tự học và áp dụng các công nghệ mới toàn cầu.
+                </p>
+                <div class="divider"></div>
+                <div class="extracurricular">
+                    <h4 class="extra-title"><i class='bx bxs-heart-circle'></i> Hoạt động Ngoại khóa</h4>
+                    <p class="extra-desc">
+                        Tham gia năng nổ các hoạt động Đoàn/Hội tại trường, hỗ trợ kỹ thuật và tổ chức các sự kiện sinh viên. Tinh thần đóng góp tập thể và cởi mở.
+                    </p>
+                </div>
+            </section>
+
+            <!-- 9. FOOTER & CONTACT CARD -->
+            <section class="bento-card contact-card">
+                <div class="contact-header">
+                    <h3>Khởi động dự án của bạn cùng tôi?</h3>
+                    <p>Hãy liên hệ để thảo luận về các cơ hội làm việc, thực tập hoặc hợp tác xây dựng những dự án tuyệt vời.</p>
+                </div>
+                
+                <div class="contact-methods">
+                    <div class="contact-item">
+                        <i class='bx bx-envelope'></i>
+                        <div class="contact-details">
+                            <span class="contact-label">Email liên hệ</span>
+                            <span class="contact-value" id="emailVal">vinhnguyen04275@gmail.com</span>
+                        </div>
+                        <button class="copy-btn" id="copyEmailBtn" title="Sao chép Email">
+                            <i class='bx bx-copy'></i>
+                        </button>
+                    </div>
+
+                    <div class="contact-socials">
+                        <a href="https://github.com/Vinhn1" target="_blank" class="social-icon-btn" title="GitHub Profile">
+                            <i class='bx bxl-github'></i>
+                        </a>
+                        <a href="https://cshub.vn/" target="_blank" class="social-icon-btn" title="Website Nghiên Cứu">
+                            <i class='bx bx-globe'></i>
+                        </a>
+                        <a href="#" class="social-icon-btn" title="LinkedIn Profile" id="linkedinBtn">
+                            <i class='bx bxl-linkedin'></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <p>© 2026 Vinh Nguyễn. Thiết kế độc bản & Tối ưu hóa bằng AI.</p>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Custom JS -->
+    <script type="module" src="script.js"></script>
+</body>
+</html>
