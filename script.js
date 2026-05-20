@@ -1,20 +1,48 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     /* ==========================================================================
-       1. INTERACTIVE MOUSE GLOW BACKGROUND
+       1. INTERACTIVE MOUSE GLOW BACKGROUND (OPTIMIZED WITH GPU & LERP)
        ========================================================================== */
     const cursorGlow = document.getElementById('cursorGlow');
     
+    let mouseX = 0;
+    let mouseY = 0;
+    let glowX = 0;
+    let glowY = 0;
+    let isGlowAnimating = false;
+    
     document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        
         // Show the cursor glow when mouse starts moving
         if (cursorGlow.style.opacity === '0' || !cursorGlow.style.opacity) {
             cursorGlow.style.opacity = '1';
         }
         
-        // Follow cursor smoothly
-        cursorGlow.style.left = `${e.clientX}px`;
-        cursorGlow.style.top = `${e.clientY}px`;
+        // Start the animation loop if it's not already running
+        if (!isGlowAnimating) {
+            isGlowAnimating = true;
+            requestAnimationFrame(updateGlowPosition);
+        }
     });
+
+    function updateGlowPosition() {
+        // Linear Interpolation (lerp) for high-end smooth trailing effect (0.08 is the speed)
+        const speed = 0.08;
+        glowX += (mouseX - glowX) * speed;
+        glowY += (mouseY - glowY) * speed;
+        
+        // Translate3d forces GPU hardware acceleration and completely avoids layout thrashing
+        cursorGlow.style.transform = `translate3d(calc(${glowX}px - 50%), calc(${glowY}px - 50%), 0)`;
+        
+        // Continue animation if we haven't converged yet
+        if (Math.abs(mouseX - glowX) > 0.1 || Math.abs(mouseY - glowY) > 0.1) {
+            requestAnimationFrame(updateGlowPosition);
+        } else {
+            isGlowAnimating = false;
+        }
+    }
 
     // Hide cursor glow when mouse leaves the viewport
     document.addEventListener('mouseleave', () => {
@@ -22,19 +50,36 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     /* ==========================================================================
-       2. DYNAMIC CARD REFLECTION (MOUSE REFLECTION IN CARD)
+       2. DYNAMIC CARD REFLECTION (OPTIMIZED BY CACHING BOUNDING RECT)
        ========================================================================== */
     const bentoCards = document.querySelectorAll('.bento-card');
     
     bentoCards.forEach(card => {
+        let cachedRect = null;
+        
+        // Cache the bounding rectangle when mouse enters the card
+        card.addEventListener('mouseenter', () => {
+            cachedRect = card.getBoundingClientRect();
+        });
+        
         card.addEventListener('mousemove', (e) => {
-            const rect = card.getBoundingClientRect();
-            const x = e.clientX - rect.left; // x coordinate inside the card
-            const y = e.clientY - rect.top;  // y coordinate inside the card
+            // Fallback in case mouseenter event was skipped
+            if (!cachedRect) {
+                cachedRect = card.getBoundingClientRect();
+            }
+            
+            // Calculate coordinates using cached rect to avoid constant layout reflows (forced layouts)
+            const x = e.clientX - cachedRect.left;
+            const y = e.clientY - cachedRect.top;
             
             // Set CSS variables for local lighting
             card.style.setProperty('--mouse-x', `${x}px`);
             card.style.setProperty('--mouse-y', `${y}px`);
+        });
+        
+        // Reset cache on mouse leave or window scroll/resize to ensure alignment remains accurate
+        card.addEventListener('mouseleave', () => {
+            cachedRect = null;
         });
     });
 

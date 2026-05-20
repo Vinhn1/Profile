@@ -78,6 +78,7 @@ body {
     opacity: 0.35;
     mix-blend-mode: screen;
     animation: floatBlob 20s infinite alternate ease-in-out;
+    will-change: transform;
 }
 
 .blob-1 {
@@ -118,16 +119,18 @@ body {
 /* Cursor Glow follow mouse */
 .cursor-glow {
     position: fixed;
+    top: 0;
+    left: 0;
     width: 350px;
     height: 350px;
     background: radial-gradient(circle, rgba(99, 102, 241, 0.12) 0%, rgba(168, 85, 247, 0.04) 40%, transparent 70%);
     border-radius: 50%;
-    transform: translate(-50%, -50%);
     pointer-events: none;
     z-index: -1;
-    transition: width 0.3s, height 0.3s;
+    transition: width 0.3s, height 0.3s, opacity 0.3s ease;
     mix-blend-mode: screen;
     opacity: 0;
+    will-change: transform;
 }
 
 /* ==========================================================================
@@ -161,6 +164,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    will-change: transform, opacity;
 }
 
 .bento-card::before {
@@ -256,6 +260,7 @@ body {
     border-radius: 50%;
     pointer-events: none;
     z-index: 1;
+    will-change: transform;
 }
 
 .ring-outer {
@@ -300,8 +305,10 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 25%;
+    object-position: center 35%; /* Shipped crop down to perfectly show head, neck and collar */
+    transform: scale(0.85); /* Zoomed out slightly inside the cyber frame for premium framing */
     transition: transform var(--transition-smooth), filter var(--transition-smooth);
+    will-change: transform, filter;
     /* High end photo treatment */
     filter: contrast(1.05) brightness(0.98) saturate(1.1) grayscale(10%);
 }
@@ -575,7 +582,7 @@ body {
 }
 
 .profile-image-card:hover .profile-avatar-img {
-    transform: scale(1.05);
+    transform: scale(0.92); /* Elegant, subtle zoom-in on hover while maintaining shoulders in view */
     filter: contrast(1.08) brightness(1) saturate(1.2);
 }
 
@@ -1476,6 +1483,9 @@ body {
         grid-column: span 1 !important;
         grid-row: span 1 !important;
         padding: 24px;
+        backdrop-filter: none !important; /* Disable heavy blur filters on mobile */
+        -webkit-backdrop-filter: none !important;
+        background: rgba(18, 16, 27, 0.85); /* Slightly more opaque background to maintain readability */
     }
     
     .hero-card {
