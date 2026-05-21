@@ -305,8 +305,8 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 35%; /* Shipped crop down to perfectly show head, neck and collar */
-    transform: scale(0.85); /* Zoomed out slightly inside the cyber frame for premium framing */
+    object-position: center 45%; /* Center face, show upper body like original */
+    transform: scale(1); /* Fill the circular frame completely */
     transition: transform var(--transition-smooth), filter var(--transition-smooth);
     will-change: transform, filter;
     /* High end photo treatment */
@@ -582,7 +582,7 @@ body {
 }
 
 .profile-image-card:hover .profile-avatar-img {
-    transform: scale(0.92); /* Elegant, subtle zoom-in on hover while maintaining shoulders in view */
+    transform: scale(1.05); /* Subtle zoom-in on hover */
     filter: contrast(1.08) brightness(1) saturate(1.2);
 }
 
